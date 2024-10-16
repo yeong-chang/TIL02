@@ -265,7 +265,7 @@ public class HashSetExample {
 총 객체수: 4
 </pre>
 
-[Member.java](..%2FJava_practice%2Fsrc%2FJ05%2FMember.java)
+
 ```java
 package J05;
 
@@ -298,7 +298,6 @@ public class Member {
 hashCode()메서드를  name과 age값이 같으면 동일한 hashCode가 리턴하도록 오버라이드하고    
 equls()메서르를 name과 age값이 같으면 true를 리턴하도록 오버라이드함
 
-[HashSetExample.java](..%2FJava_practice%2Fsrc%2FJ05%2FHashSetExample.java)
 ```java
 package J05;
 

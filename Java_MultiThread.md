@@ -1,6 +1,6 @@
 # Multi Thread
 
-### 멀티 쓰레드  
+## 멀티 쓰레드  
 일반적으로 하나의 프로세서는 하나의 스레드를 가지고 작업을 수행한다.  
 하지만 멀티 스레드는 하나의 프로세스 내에서 둘 이상의 스레드가 동시에 작업을 수행하는 것을 의미한다.
 
@@ -84,7 +84,7 @@ public class BeepPrintExample {
 메인쓰레드에서 프린팅을 하니 원래 목적같이 비프음과 프린팅을동시에 내는데 성공했다
 
 ---
-### Thread 자식클래스 생성
+## Thread 자식클래스 생성
 
 생성방법:
 <pre>
@@ -98,7 +98,7 @@ public class WorkerThread extends Thread{
 //스레드 객체 생성
 Thread thread = new WorkerThread();
 </pre>
-### Thread 이름
+## Thread 이름
 메인스레드는 main이라는 이름을 가지고  
 작업 스레드는 자동적으로 Thread-n이라는 이름을 가진다.  
 다른이름으로 설정하고싶다면
@@ -148,7 +148,7 @@ Thread-0실행
 chat-thread실행
 Thread-2실행
 </pre>
-### Thread 메서드 종류
+## Thread 메서드 종류
 ![thread.png](img%2Fthread.png)         
 ### sleep
 ````java
@@ -288,7 +288,7 @@ workThreadA: 작업처리
 yield()매서드를 호출한다 따라서 ThreadB만 10초동안 실행하고    
 다시 10초뒤엔 5초동안 두스레드가 같이 실행한다
 
-### Thread동기화(Synchronized)       
+## Thread동기화(Synchronized)       
 동기화 메서드 선언하는 방법은 다음과 같이 synchronize 키워드를 붙이는것이다 
 인스턴스와 정적 메서드 어디든 붙일수 있다.
 <pre>
@@ -516,7 +516,7 @@ ThreadA: methodA 작업 실행
 ThreadB: methodB 작업 실행
 ...
 </pre>
-### 스레드 안전 종료
+## 스레드 안전 종료
 1. while
 2. interrupt
 ### while
@@ -696,7 +696,7 @@ public class DemonExample {
 메인 스레드 종료
 </pre>
 
-###  ThreadPool     
+##  ThreadPool     
 병렬 작업 처리가 많아지면 스레드의 개수가 폭증하여 CPU 및 메모리 사용량이 늘어난다.
 이렇게 병렬 작업 증가로 인한 스레드의 폭증을 막으려면 스레드풀(ThreadPool)을 사용하는 것이 좋다.        
 ![Thread07.png](img%2FThread07.png)

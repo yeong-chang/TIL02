@@ -1,8 +1,7 @@
-Collection Framework
-===
----
-List_Collection
----
+# Collection Framework
+
+## List_Collection
+
 
 <pre>
 public class Board {
@@ -81,6 +80,7 @@ Vector
 ---
 Vector는 ArrayList와 동일한 내부 구조를 가지고 있다. 하지만 Vector는 동기화된 메서드로 구성되어있어  
 멀티스레드가 동시에 Vector() 메소드를 실행할 수 없다.
+
 ---
 
 ### Vector 생성방법
@@ -216,7 +216,8 @@ ArrayList 걸린시간:     983600 ns
 LinkedKist 걸린시간:    649300 ns 
 </pre>
 이처럼 LinkedList가 더 빠른 성능을 낸다 ArrayList가 느린 이유는
-0번 인덱스에 개로운 객체가 추가되면서 기존 객체의 인덱스를 한칸씩 뒤로 미는 작업을 하기 때문이다
+0번 인덱스에 개로운 객체가 추가되면서 기존 객체의 인덱스를 한칸씩 뒤로 미는 작업을 하기 때문이다     
+
 ----
 ### Set 컬렉션
 

@@ -1,7 +1,16 @@
 Generic
 ===
-제네릭이란 결정되지 않은 타입을  파라미터로 처리하고 실제 사용할 때  
-파라미터를 구체적인 타입으로 대체시키는 기능이다
+
+제네릭(Generic)은 자바에서 다양한 데이터 타입을 지원하면서도 코드의 중복을 줄이고, 컴파일 타임에 타입 안전성을 보장하기 위한 기능 입니다. 제네릭을 사용하면 클래스나 메서드에서 사용할 데이터 타입을 외부에서 지정할 수 있어, 코드의 재사용성과 안정성을 크게 향상시킬 수 있습니다.
+- **타입 안전성(Type Safety)**: 제네릭을 사용하면 **컴파일 시점에 타입을 체크**할 수 있어, 잘못된 타입의 데이터가 사용될 경우 컴파일 에러가 발생합니다. 이를 통해 런타임 오류를 줄일 수 있습니다.
+
+- **형변환 생략**: 제네릭을 사용하면 객체를 저장할 때 따로 형변환(casting)을 할 필요가 없습니다.
+
+- **코드 재사용성**:  제네릭을 통해 다양한 타입을 지원하는 클래스나 메서드를 쉽게 정의할 수 있으며, 코드 중복을 줄이고 유영한 프로그래밍이 가능합니다.
+  **제네릭 타입(Generic Type):**
+
+**제네릭 타입(Generic Type)은 자바에서 클래스,인터페이스, 메서드를 작성할 때, 구체적인 타입을 명시하지 않고 나중에 필요할 때 타입을 지정할 수 있도록 하는 기능.**   
+(T,E,K,V와 같은 대문자로 표현 합니다.)              
 ---
 <pre>
 public class Box{
@@ -60,9 +69,118 @@ public class GenericExample {
     }
 }
 ````
-|실행 결과
+|실행 결과    
+
 <pre>
 안녕하세요
 100
 </pre>
+
+
+
+
+---
+### 제네릭 타입 예제
+
+|Car  
+
+````java
+package ch01;
+
+public class Car {
+    @Override
+    public String toString() {
+        return "Car []";
+    }
+}
+````      
+
+|Tv
+````java
+
+package ch01;
+
+public class Tv {
+    @Override
+    public String toString() {
+        return "Tv []";
+    }
+}
+
+````
+
+|Product      
+
+````java
+
+package ch01;
+
+public class Product <T, M> {
+    //T: type
+    //M: model
+
+    //필드
+    private T type;
+
+    private M model;
+
+
+    //메서드
+    public T getType() {
+        return this.type;
+    }
+
+    public void setType(T type) {
+        this.type = type;
+    }
+
+    public M getModel() {
+        return model;
+    }
+
+    public void setModel(M model) {
+        this.model = model;
+    }
+
+}
+
+````
+
+|Main
+
+````java
+package ch01;
+
+public class Main {
+    public static void main(String[] args) {
+
+            Product<Tv, String> product01 = new Product<>();
+
+            product01.setType(new Tv());
+            product01.setModel("스마트TV");
+
+            Tv tv = product01.getType();
+            String tvModel = product01.getModel();
+            System.out.println(tv+","+tvModel);
+
+            System.out.println("===================================");
+
+            Product<Car, String> product02 = new Product<>();
+            product02.setType(new Car());
+            product02.setModel("SUV");
+
+            Car car = product02.getType();
+            String carModel = product02.getModel();
+            System.out.println(car+","+carModel);
+    }
+}
+````  
+
+|실행 결과
+````java
+Tv [],스마트TV
+===================================
+Car [],SUV
+````
+
 

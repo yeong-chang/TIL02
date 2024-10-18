@@ -149,7 +149,9 @@ chat-thread실행
 Thread-2실행
 </pre>
 ## Thread 메서드 종류
-![thread.png](img%2Fthread.png)         
+![thread.png](img%2Fthread.png)     
+
+
 ### sleep
 ````java
 package ch02sec05;

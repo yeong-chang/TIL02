@@ -149,7 +149,7 @@ chat-thread실행
 Thread-2실행
 </pre>
 ## Thread 메서드 종류
-![thread.png](img%2Fthread.png)     
+![/img/thread.png](img%2Fthread.png)     
 
 
 ### sleep
